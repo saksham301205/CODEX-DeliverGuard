@@ -1,4 +1,4 @@
-<h1 align="center">🚀 DeliverGuard</h1>
+<h1 align="center">DeliverGuard</h1>
 <p align="center">
   <b>AI-Powered Parametric Insurance for Delivery Workers</b><br>
   Protecting income with real-time disruption intelligence
