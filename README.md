@@ -1,126 +1,78 @@
-# CODEX-DeliverGuard
-AI-powered multi-trigger insurance platform for delivery workers using real-time disruption data, zone-based risk scoring, and fraud detection to protect against income loss.
+<h1 align="center">🚀 DeliverGuard</h1>
+<p align="center">
+  <b>AI-Powered Parametric Insurance for Delivery Workers</b><br>
+  Protecting income with real-time disruption intelligence
+</p>
 
-DeliverGuard – AI-Powered Insurance for Delivery Workers
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-React-blue?logo=react">
+  <img src="https://img.shields.io/badge/Backend-FastAPI-green?logo=fastapi">
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-blue?logo=postgresql">
+  <img src="https://img.shields.io/badge/AI-Enabled-orange">
+</p>
 
-1. Requirement, Persona & Workflow
-Requirement
-Delivery workers experience income loss due to external disruptions such as heavy rain, pollution, heatwaves, and curfews. These are uncontrollable and currently lack automated income protection.
-DeliverGuard provides a parametric insurance solution that compensates workers based on real-time disruption triggers.
+---
 
-Persona
-Name: Ravi
- Role: Food Delivery Partner (Swiggy/Zomato)
- Location: Chennai
-Scenario:
- Ravi earns daily income through deliveries. During heavy rain or high AQI:
- Orders reduce
- Movement becomes unsafe
- Income drops significantly
+## ✨ Tagline
+> **"DeliverGuard protects delivery workers from income loss using real-time triggers, AI-driven risk scoring, and automated payouts."**
 
-Workflow
+---
 
-User registers and selects location
-System assigns a delivery zone
-Risk engine computes zone risk score
-Weekly premium is generated
-User subscribes to policy
-System monitors real-time triggers
-Trigger condition met → claim auto-generated
-Fraud detection validates claim
-Payout is processed (simulated)
+## 📑 Table of Contents
+- [🧩 Problem & Persona](#-1-problem--persona)
+- [🔄 Workflow](#-workflow)
+- [💰 Premium Model & Triggers](#-2-premium-model--parametric-triggers)
+- [🧠 AI/ML Integration](#-3-aiml-integration)
+- [⚙️ Tech Stack](#️-4-tech-stack)
+- [🏗️ Architecture](#️-5-system-architecture)
+- [🗺️ Features](#️-6-key-features)
+- [📅 Development Plan](#-7-development-plan)
+- [🏁 Conclusion](#-8-conclusion)
 
-2. Weekly Premium Model, Parametric Triggers & Platform Choice
-Weekly Premium Model
-Risk_Score = (
-   0.3 * Rain_Risk +
-   0.2 * AQI_Risk +
-   0.2 * Heat_Risk +
-   0.2 * Flood_Risk +
-   0.1 * Social_Risk
-)
+---
 
-Premium = 30 + (Risk_Score * 50)
+## 🧩 1. Problem & Persona
 
-Low risk → ₹40/week
+### 🚨 Problem
+Delivery workers face **income loss due to external disruptions** such as:
 
-Medium risk → ₹55/week
+- 🌧 Heavy Rain  
+- 🌫 High Pollution (AQI)  
+- 🌡 Heatwaves  
+- 🚫 Curfews / Zone Restrictions  
 
-High risk → ₹70/week
+These events reduce working hours, yet **no real-time insurance solution exists**.
 
-Parametric Triggers
+---
 
-Trigger
-Condition
-Rainfall
-> 80 mm
-AQI
-> 300
-Temperature
-> 40°C
-Flood Alert
-Active
-Curfew
-Zone restricted
+### 👤 Persona
 
-These triggers are objective, real-time, and automated, ensuring zero manual claim filing.
+**Name:** Ravi  
+**Role:** Food Delivery Partner  
+**Location:** Chennai  
 
-Platform Choice
+**Scenario:**
+- Daily earnings: ₹800–₹1000  
+- Rain/AQI → fewer orders  
+- Curfews → blocked routes  
 
-We use a Web application (React) because:
-Enables interactive dashboards and risk maps
-Faster development and deployment
-Easier integration with backend APIs
+👉 Result: **Unprotected income loss**
 
-3. AI/ML Integration
+---
 
-Risk Prediction
-Predicts disruption probability for each zone
+## 🔄 Workflow
 
-Inputs: weather, AQI, historical trends
-
-Model: Linear Regression
-
+```text
+User → Select Location → Zone Assigned
+        ↓
+Risk Engine → Premium Calculation
+        ↓
+Policy Activated
+        ↓
+Real-Time Trigger Monitoring
+        ↓
+Claim Auto-Generated
+        ↓
 Fraud Detection
-Model: Isolation Forest
-Detects:
-GPS spoofing
-Claims from unaffected zones
-Duplicate claims
-Weather mismatch
-Example:
- Rain claim + no rainfall in API → claim rejected
-
-4. Tech Stack & Development Plan
-
-Tech Stack
-Frontend: React.js
- Backend: Python (FastAPI)
- Database: PostgreSQL
- AI/ML: scikit-learn, pandas, numpy
- APIs: OpenWeatherMap, AQICN, mock APIs
- Payments: Razorpay/Stripe (sandbox)
-
-
-6. Additional Relevant Features
-   
-Delivery Zone Risk Map: Visual heatmap showing risk levels and premium suggestions
-
-Multi-Trigger Monitoring: Simultaneous tracking of weather, pollution, heat, and social disruptions
-
-Automated Claims: Zero-touch claim processing with instant payouts
-
-6. Conclusion
-   
-DeliverGuard is an AI-powered parametric insurance platform that provides:
-Real-time disruption monitoring
-
-Automated claim processing
-
-Risk-based pricing
-
-Fraud detection
-
-It ensures financial protection and transparency for delivery workers.
-
-
+        ↓
+Payout (Simulated)
