@@ -1,4 +1,5 @@
 <h1 align="center">DeliverGuard</h1>
+
 <p align="center">
   <b>AI-Powered Parametric Insurance for Delivery Workers</b><br>
   Protecting income with real-time disruption intelligence
@@ -13,27 +14,31 @@
 ---
 
 ## 
+
 > **DeliverGuard protects delivery workers from income loss using real-time triggers, AI-driven risk scoring, and automated payouts.**
 
 ---
 
-##  Table of Contents
-- [🧩 Problem & Persona](#-1-problem--persona)
-- [🔄 Workflow](#-workflow)
-- [💰 Premium Model & Triggers](#-2-premium-model--parametric-triggers)
-- [🧠 AI/ML Integration](#-3-aiml-integration)
-- [⚙️ Tech Stack](#️-4-tech-stack)
-- [🏗️ Architecture](#️-5-system-architecture)
-- [🗺️ Features](#️-6-key-features)
-- [📅 Development Plan](#-7-development-plan)
-- [🏁 Conclusion](#-8-conclusion)
+## Table of Contents
+
+- [🧩 Problem & Persona](#-1-problem--persona)  
+- [🔄 Workflow](#-workflow)  
+- [💰 Premium Model & Triggers](#-2-premium-model--parametric-triggers)  
+- [🧠 AI/ML Integration](#-3-aiml-integration)  
+- [⚙️ Tech Stack](#️-4-tech-stack)  
+- [🏗️ Architecture](#️-5-system-architecture)  
+- [🗺️ Features](#️-6-key-features)  
+- [📅 Development Plan](#-7-development-plan)  
+- [🏁 Conclusion](#-8-conclusion)  
 
 ---
 
 ## 1. Problem & Persona
 
 ### 🚨 Problem
+
 Delivery workers face **income loss due to external disruptions** such as:
+
 - 🌧 Heavy Rain  
 - 🌫 High Pollution (AQI)  
 - 🌡 Heatwaves  
@@ -118,6 +123,7 @@ Premium = 30 + (Risk_Score * 50)
 ## 3. AI/ML Integration
 
 ### Risk Prediction
+
 - Predicts disruption probability per zone  
 - Inputs:
   - Weather data  
@@ -132,6 +138,7 @@ Premium = 30 + (Risk_Score * 50)
 **Model:** Isolation Forest  
 
 Detects:
+
 - 📍 GPS spoofing  
 - ❌ Claims from unaffected zones  
 - 🔁 Duplicate claims  
