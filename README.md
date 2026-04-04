@@ -1,135 +1,223 @@
-<h1 align="center">🛡 DeliverGuard</h1> <p align="center"> <b>Parametric Insurance Platform for Delivery Workers</b><br> Protecting income with automated, trigger-based payouts </p> <p align="center"> <img src="https://img.shields.io/badge/Frontend-React-blue?logo=react"> <img src="https://img.shields.io/badge/Backend-FastAPI-green?logo=fastapi"> <img src="https://img.shields.io/badge/Logic-Rule--Based-orange"> </p>
-📌 Overview
+<h1 align="center">DeliverGuard</h1>
 
-DeliverGuard is a parametric insurance system that protects delivery workers from income loss using automated environmental triggers — eliminating manual claims.
+<p align="center">
+  <b>AI-Powered Parametric Insurance for Delivery Workers</b><br>
+  Protecting income with real-time disruption intelligence
+</p>
 
-🧩 Problem & Persona
-🚨 Problem
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-React-blue?logo=react">
+  <img src="https://img.shields.io/badge/Backend-FastAPI-green?logo=fastapi">
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-blue?logo=postgresql">
+</p>
 
-Delivery workers face income loss due to:
+---
 
-🌧 Heavy Rain
-🌫 High Pollution (AQI)
-🌡 Heatwaves
-🚫 Curfews / Restrictions
+## 
 
-These disruptions reduce working hours, yet no automated insurance system compensates them instantly.
+> **DeliverGuard protects delivery workers from income loss using real-time triggers, AI-driven risk scoring, and automated payouts.**
 
-👤 Persona
+---
 
-Ravi — Delivery Partner (Chennai)
+## Table of Contents
 
-Daily earnings: ₹800–₹1000
-Rain / AQI → fewer orders
-Curfews → blocked routes
+- [🧩 Problem & Persona](#-1-problem--persona)  
+- [🔄 Workflow](#-workflow)  
+- [💰 Premium Model & Triggers](#-2-premium-model--parametric-triggers)  
+- [🧠 AI/ML Integration](#-3-aiml-integration)  
+- [⚙️ Tech Stack](#️-4-tech-stack)  
+- [🏗️ Architecture](#️-5-system-architecture)  
+- [🗺️ Features](#️-6-key-features)  
+- [📅 Development Plan](#-7-development-plan)  
+- [🏁 Conclusion](#-8-conclusion)  
 
-👉 Result: Unpredictable income loss
+---
 
-🔄 Workflow
+## 1. Problem & Persona
 
-User Registers
-↓
-Selects Policy (Predefined / Custom)
-↓
-Policy Activated
-↓
-System Monitors Triggers
-↓
-Trigger Matches Policy
-↓
-Claim Auto-Generated
-↓
-Payout Issued
+### 🚨 Problem
 
-💰 Premium Model
-📊 Predefined Policies
-Plan	Coverage	Price
-Basic	Rain + AQI	₹40
-Standard	Rain + AQI + Heatwave	₹55
-Premium	All Triggers	₹70
-🧩 Custom Policy
+Delivery workers face **income loss due to external disruptions** such as:
 
-Premium = 30 + (15 × number_of_triggers)
+- 🌧 Heavy Rain  
+- 🌫 High Pollution (AQI)  
+- 🌡 Heatwaves  
+- 🚫 Curfews / Zone Restrictions  
 
-👉 More flexibility → higher cost
+These events reduce working hours, yet **no real-time insurance solution exists**.
 
-⚡ Parametric Triggers
-Trigger	Condition
-🌧 Rainfall	> 80 mm
-🌫 AQI	> 300
-🌡 Temperature	> 40°C
-🌊 Flood	Active
-🚫 Curfew	Active
+---
 
-Key Insight: Claims are automatically triggered — no manual filing required.
+### 👤 Persona
 
-📦 Policy System
-🔹 Predefined Policies
-Fixed coverage bundles
-Lower cost
-Easy selection
-🔹 Custom Policies
-User-selected triggers
-Dynamic pricing
-Higher payout potential
-🔹 Claim Logic
+**Name:** Ravi  
+**Role:** Food Delivery Partner  
+**Location:** Chennai  
 
-if trigger in selected_policy:
-  payout = base_value × policy_multiplier
+**Scenario:**
+- Daily earnings: ₹800–₹1000  
+- Rain/AQI → fewer orders  
+- Curfews → blocked routes  
 
-⚙️ Tech Stack
-Layer	Technology
-🎨 Frontend	React.js
-⚡ Backend	FastAPI (Python)
-🧠 Logic	Rule-Based Parametric System
-🌐 Data	Mock Data
-🏗️ System Architecture
+Result: **Unprotected income loss**
 
-Frontend (React)
-↓
-Backend (FastAPI)
-↓
-Business Logic (Triggers + Pricing)
-↓
-Mock Data Simulation
+---
 
-🗺️ Key Features
-📦 Policy Selection
-Multiple predefined plans
-Custom policy builder
-⚡ Trigger-Based Automation
-Real-time condition evaluation
-Matches selected policy
-💰 Automated Claims
-Zero manual process
-Instant payout generation
-📜 Claim History
-View past payouts
-Track claims
-🚧 Challenges
-Designing realistic trigger thresholds
-Balancing premium vs payout
-Structuring flexible policies
-Simulating real-world data
-🏆 Accomplishments
-Built complete insurance workflow
-Implemented multiple policy types
-Designed custom policy builder
-Achieved automated claims
-Developed clean UI
-📈 Future Improvements
-Real-time weather & AQI APIs
-AI-based risk prediction
-Fraud detection
-Zone-based risk mapping
-Mobile application
-🏁 Conclusion
+## 🔄 Workflow
 
-DeliverGuard transforms insurance from a manual, delayed process into an instant, automated protection system.
+User → Select Location → Zone Assigned  
+↓  
+Risk Engine → Premium Calculation  
+↓  
+Policy Activated  
+↓  
+Real-Time Trigger Monitoring  
+↓  
+Claim Auto-Generated  
+↓  
+Fraud Detection  
+↓  
+Payout (Simulated)
 
-✔ Real-time payouts
-✔ Flexible policies
-✔ Zero-touch claims
-✔ Built for gig workers
+---
 
-<p align="center">Built by Team CODEX</p>
+## 2. Premium Model & Parametric Triggers
+
+### Risk-Based Weekly Premium
+
+```python
+# Risk Score Calculation
+Risk_Score = (
+    0.3 * Rain_Risk +
+    0.2 * AQI_Risk +
+    0.2 * Heat_Risk +
+    0.2 * Flood_Risk +
+    0.1 * Social_Risk
+)
+
+Premium = 30 + (Risk_Score * 50)
+```
+
+| Risk Level | Premium |
+|-----------|--------|
+| 🟢 Low | ₹40/week |
+| 🟡 Medium | ₹55/week |
+| 🔴 High | ₹70/week |
+
+---
+
+### Parametric Triggers
+
+| Trigger | Condition |
+|--------|----------|
+| 🌧 Rainfall | > 80 mm |
+| 🌫 AQI | > 300 |
+| 🌡 Temperature | > 40°C |
+| 🌊 Flood Alert | Active |
+| 🚫 Curfew | Zone restricted |
+
+> **Key Insight:** Claims are triggered automatically — no manual filing required.
+
+---
+
+## 3. AI/ML Integration
+
+### Risk Prediction
+
+- Predicts disruption probability per zone  
+- Inputs:
+  - Weather data  
+  - AQI  
+  - Historical trends  
+- Model: **Linear Regression**
+
+---
+
+### Fraud Detection
+
+**Model:** Isolation Forest  
+
+Detects:
+
+- 📍 GPS spoofing  
+- ❌ Claims from unaffected zones  
+- 🔁 Duplicate claims  
+- 🌤 Weather mismatch  
+
+> Example: Rain claim + no rainfall → **rejected**
+
+---
+
+## 4. Tech Stack
+
+| Layer | Technology |
+|------|-----------|
+| 🎨 Frontend | React.js + Tailwind CSS |
+| ⚡ Backend | FastAPI (Python) |
+| 🗄 Database | PostgreSQL |
+| 🤖 AI/ML | scikit-learn, pandas, numpy |
+| 🌐 APIs | OpenWeatherMap, AQICN |
+| 💳 Payments | Razorpay / Stripe (sandbox) |
+
+---
+
+## 5. System Architecture
+
+Frontend (React)  
+↓  
+Backend (FastAPI)  
+↓  
+PostgreSQL Database  
+↓  
+External APIs (Weather, AQI)  
+↓  
+AI Models (Risk + Fraud Detection)
+
+---
+
+## 6. Key Features
+
+### Delivery Zone Risk Map
+- Interactive heatmap  
+- Shows:
+  - Risk levels  
+  - Active disruptions  
+  - Premium suggestions  
+
+---
+
+### Multi-Trigger Monitoring
+- Tracks:
+  - Weather  
+  - Pollution  
+  - Heat  
+  - Social disruptions  
+
+---
+
+### Automated Claims
+- Zero manual process  
+- Instant trigger-based payouts  
+
+---
+
+### Fraud Protection
+- AI-based anomaly detection  
+- Ensures claim authenticity  
+
+---
+
+## 7. Conclusion
+
+DeliverGuard is a **smart, scalable, AI-powered insurance platform** that:
+
+✔ Protects delivery workers from income loss  
+✔ Uses real-time disruption data  
+✔ Automates claims and payouts  
+✔ Ensures fraud-resistant validation  
+
+> DeliverGuard brings efficiency, transparency, and financial security to the gig economy.
+
+---
+
+<p align="center">Built By Team CODEX</p>
